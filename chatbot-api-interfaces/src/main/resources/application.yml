@@ -1,2 +1,25 @@
 server:
   port: 8090
+
+# 分组任务配置
+chatbot-api:
+  group01:
+    groupName: ChatGPT AI 问答助手
+    groupId: 28885518425541 # 知识星球ID
+    cookie: # 知识星球个人cookie信息
+    openAiKey: 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
+    cronExpression: 0/30 * * * * ? # 执行的频次配置，参考：cron.qqe2.com
+    silenced: false
+  group02:
+    groupName: 码农会锁
+    groupId: 28885518425541 # 知识星球ID
+    cookie: # 知识星球个人cookie信息
+    openAiKey: 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
+    cronExpression: 0/30 * * * * ? # 执行的频次配置，参考：cron.qqe2.com
+    silenced: true
+logging:
+  level:
+    org:
+      springframework:
+        boot:
+          autoconfigure: ERROR
